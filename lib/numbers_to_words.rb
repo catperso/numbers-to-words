@@ -15,8 +15,10 @@ class WordMaker
       @ones.fetch(number)
     elsif (number_array.length == 2) && (number_array[0] == 1)
       @teens.fetch(number_array[1])
-    else 
+    elsif (number_array.length == 2)
       @tens.fetch(number_array[0]) + ' ' + @ones.fetch(number_array[1])
+    else
+      @ones.fetch(number_array[0]) + ' hundred ' + @tens.fetch(number_array[1]) + ' ' + @ones.fetch(number_array[2])
     end
   end
 end

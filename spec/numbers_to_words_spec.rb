@@ -17,4 +17,9 @@ describe('WordMaker#wordizer') do
     expect(word1.wordizer(69)).to(eq('sixty nine'))
   end
 
+  it('takes any three digit number and returns the written word version') do
+    word1 = WordMaker.new()
+    expect(word1.wordizer(369)).to(eq('three hundred sixty nine'))
+  end
+
 end
